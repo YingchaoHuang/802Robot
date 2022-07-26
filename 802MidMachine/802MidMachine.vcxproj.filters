@@ -25,6 +25,12 @@
     <Filter Include="源文件\protocol">
       <UniqueIdentifier>{4340d0d2-2851-4a4b-9a42-8b39871c2aab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\TaskMnager">
+      <UniqueIdentifier>{57e2b992-77b7-476b-aa36-becf4aa0e584}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\TaskManager">
+      <UniqueIdentifier>{33ecba8d-fb03-4b4d-8b29-31cdd99ce006}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="midMachineMain.cpp">
@@ -42,6 +48,9 @@
     <ClCompile Include="Communication\UDPServer.cpp">
       <Filter>源文件\Communication</Filter>
     </ClCompile>
+    <ClCompile Include="TaskManager\taskManager.cpp">
+      <Filter>源文件\TaskManager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Communication\TCPClient.h">
@@ -55,6 +64,9 @@
     </ClInclude>
     <ClInclude Include="Communication\UDPServer.h">
       <Filter>头文件\Communication</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskManager\taskManager.h">
+      <Filter>头文件\TaskMnager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

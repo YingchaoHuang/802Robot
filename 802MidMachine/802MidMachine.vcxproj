@@ -147,12 +147,14 @@
     <ClCompile Include="Communication\UDPClient.cpp" />
     <ClCompile Include="Communication\UDPServer.cpp" />
     <ClCompile Include="midMachineMain.cpp" />
+    <ClCompile Include="TaskManager\taskManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Communication\TCPClient.h" />
     <ClInclude Include="Communication\TCPServer.h" />
     <ClInclude Include="Communication\UDPClient.h" />
     <ClInclude Include="Communication\UDPServer.h" />
+    <ClInclude Include="TaskManager\taskManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
