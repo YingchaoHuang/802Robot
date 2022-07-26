@@ -1,0 +1,71 @@
+
+//协议版本
+syntax = "proto3";
+//生成的类所处的层级
+package proto;
+//是否需要將生成的类拆分为多个
+//option java_multiple_files = true;
+
+messageRequestSystemSetUp{
+  int32 AGVSpeed=1;
+  int32 LiftDeviceSpeed=2;
+  int32 RobotSpeed=3;
+}
+
+messageRequestAGVMove{
+  int32 AGVMoveType=1;
+  double posX=2;
+  double posY=3;
+  double rotateAngle=4;
+  /*
+    AGVMoveType为AGV小车移动方式，1为平移运动，2为旋转运动
+    posX、posY分别为AGV小车目标点的X、Y坐标信息
+    rotateAngle为AGV小车的旋转角度，单位为度
+  */
+}
+
+messageResponseAGVMove{
+  bool res=1;
+  string resInfo=1;
+/*
+  返回AGV的运动结果，res为1表示成功，-1表示失败
+  resInfo反馈失败结果原因
+*/
+}
+
+messageRequestLiftDeviceMove{
+  double height=1;
+}
+
+messageResponseLiftDeviceMove{
+  bool res=1;
+  string resInfo=1;
+  /*
+    返回升降机构的运动结果，res为1表示成功，-1表示失败
+    resInfo反馈失败结果原因，如超过升降机构行程等
+  */
+}
+
+enum MessageType
+{
+  messagezero=0;                  //这条没用
+  systemSetUp = 1;                //系统参数设置
+	createTask=2;                   //新建任务
+	resumeLastTask=3;               //恢复上次任务
+	pauseTask=4;                    //暂停任务
+	resumeTask=5;                   //恢复任务
+	stopTask=6;                     //停止任务
+  AGVMove=1;                      //底盘移动
+  LiftDeviceMove=2;               //升降机构移动
+  RobotMove=3;                    //机械臂移动
+  ManualAGVMove=1;                //手动移动AGV
+  ManualLiftDeviceMove=2;         //手动移动升降机构
+  ManualRobotMove=3;              //手动移动机械臂
+  stopManualAGVMove=1;            //停止手动移动AGV
+  stopManualLiftDeviceMove=1;     //停止手动移动升降机构
+  stopManualRobotMove=1;          //停止手动移动机械臂
+  CameraCapture=4;                //摄影测量设备执行拍摄任务
+  showSystemState=15;             //显示系统状态
+  showError=16;                   //显示系统错误
+  clearError=17;                  //清除系统错误
+};

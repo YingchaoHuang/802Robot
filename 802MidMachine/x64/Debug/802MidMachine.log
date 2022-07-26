@@ -1,0 +1,13 @@
+﻿  TCPClient.cpp
+C:\Users\房东的印钞\source\repos\802MidMachine\Communication\TCPClient.cpp(57,10): warning C4477: “printf”: 格式字符串“%c”需要类型“int”的参数，但可变参数 1 拥有了类型“char *”
+C:\Users\房东的印钞\source\repos\802MidMachine\Communication\TCPClient.cpp(57,10): warning C4313: “printf”: 格式字符串中的“%c”与“char *”类型的参数 1 冲突
+  TCPServer.cpp
+C:\Users\房东的印钞\source\repos\802MidMachine\Communication\TCPServer.cpp(41,10): warning C4477: “printf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“int”
+C:\Users\房东的印钞\source\repos\802MidMachine\Communication\TCPServer.cpp(41,10): warning C4313: “printf”: 格式字符串中的“%s”与“int”类型的参数 1 冲突
+C:\Users\房东的印钞\source\repos\802MidMachine\Communication\TCPServer.cpp(54,7): warning C4101: “type”: 未引用的局部变量
+C:\Users\房东的印钞\source\repos\802MidMachine\Communication\TCPServer.cpp(53,7): warning C4101: “length”: 未引用的局部变量
+  UDPClient.cpp
+  UDPServer.cpp
+  midMachineMain.cpp
+  正在生成代码...
+  802MidMachine.vcxproj -> C:\Users\房东的印钞\source\repos\802MidMachine\x64\Debug\802MidMachine.exe
